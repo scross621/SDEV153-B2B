@@ -1,0 +1,47 @@
+body {
+  background-color: #FFFFFF;
+  color: #666666;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: #002171;
+  color: #FFFFFF;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  line-height: 200%;
+}
+
+nav {
+  font-weight: bold;
+  background-color: skyblue;
+}
+
+h2 {
+  color: mediumblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+dt {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.resort {
+  color: mediumblue;
+  font-size: 1.2em;
+}
+
+footer {
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}
+
+#wrapper {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}

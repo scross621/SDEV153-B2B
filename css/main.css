@@ -1,20 +1,39 @@
 body {
+  height: 100vh;
   background-color: rgb(27, 27, 27);
-  color: rgb(251, 251, 251);
+  background-image: radial-gradient(rgb(138, 138, 138), rgb(0, 0, 0));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+h1 {
+  text-align: center;
+  padding: 10px;
+
+  background-color: rgb(61, 61, 61);
+  padding: 0.5em 1em;
+  border: 2px solid rgb(121, 121, 121);
+  border-radius: 15px;
+}
+
 a {
+  display: block;
+  padding: 5px;
   color: #0099ff;
   text-decoration: none;
+  
   transition: 300ms all ease-in-out;
 }
 
 a:hover {
   color: aqua;
+  box-shadow: 3px 3px 10px black;
 }
 
 ul {
@@ -29,7 +48,7 @@ ul {
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(61, 61, 61);
   width: 70%;
   padding: 2em;
   border: 2px solid rgb(121, 121, 121);

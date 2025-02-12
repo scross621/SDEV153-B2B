@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgb(27, 27, 27);
   background-image: radial-gradient(rgb(138, 138, 138), rgb(0, 0, 0));
   background-size: 100% 100%;
@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -20,6 +21,11 @@ h1 {
   padding: 0.5em 1em;
   border: 2px solid rgb(121, 121, 121);
   border-radius: 15px;
+}
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 a {

@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body.stop-transition * {
+  transition: none !important;
+}
+
 body {
   height: 100dvh;
   display: flex;
@@ -25,6 +29,7 @@ nav ul.navbar {
   backdrop-filter: blur(10px);
   list-style: none;
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   position: fixed;
   width: 100%;
@@ -75,6 +80,7 @@ nav ul#nav-dropdown {
   opacity: 0;
   height: 0;
   overflow: hidden;
+  visibility: hidden;
   
   width: 100%;
   background: rgba(12, 50, 133, 0.315);
@@ -91,6 +97,9 @@ nav li.nav-item a.nav-link:hover, #nav-droplink:hover {
 
 /*Menu icon container*/
 .hamburger{ 
+  display: block;
+  background: none;
+  border: none;
   margin: 0 20px;
   cursor: pointer;
   z-index: 999;
@@ -109,9 +118,6 @@ nav li.nav-item a.nav-link:hover, #nav-droplink:hover {
 }
 
 /*This all allows for the menu icon to show and transition into an X icon*/
-.hamburger {
-  display: block;
-}
 
 .hamburger.active .bar:nth-child(2){
     opacity: 0;
@@ -141,13 +147,23 @@ footer div {
   padding: 1.5em;
 }
 
-@media screen and (min-width:780px) { 
+nav li#nav-dropitem ul.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+nav li#nav-dropitem ul.height {
+  height: 150px;
+}
+
+@media screen and (width >= 470px) { 
   /* This puts the navbar at the top of the page in desktop and tablet views */
   nav ul.navbar {
     background: rgba(12, 50, 133, 0.555);
     backdrop-filter: blur(10px);
     flex-direction: row;
     position: sticky;
+    visibility: visible;
     width: 100%;
     height: inherit;
     z-index: 998;
@@ -160,17 +176,34 @@ footer div {
   }
 
   /* This allows for the button dropdown link to look like the rest of the navigation links */
-#nav-dropitem {
-  width: 120px
+nav li#nav-dropitem {
+  display: block;
 }
 
-#nav-dropdown {
-  height: fit-content;
+nav button#nav-droplink {
+  position: relative;
+  width: 100%;
 }
 
-#nav-dropdown {
+
+nav ul#nav-dropdown {
+  background: rgba(12, 50, 133, 0.658);
+  /* backdrop-filter: none; */
+  visibility: hidden;
+
+  position: absolute;
+  left: 0;
+  top: 50px;
+
+  height: auto;
+  width: 150%;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+nav #nav-droplink:hover + ul#nav-dropdown, ul#nav-dropdown:hover {
   opacity: 1;
   visibility: visible;
-  position: absolute;
+  
 }
+
 }

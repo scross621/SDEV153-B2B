@@ -1,3 +1,14 @@
+:root {
+  --primary-red: #541A2E;
+  --secondary-red: #B51A2B;
+  --primary-red-alpha: #541a2eaa;
+  --secondary-red-alpha: #b51a2c9e;
+  --peach: #FFA586;
+  --primary-blue: #384358;
+  --secondary-blue: #242F49;
+  --tertiary-blue: #1B1E2F;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +23,13 @@ body {
   height: 100dvh;
   display: flex;
   flex-direction: column;
+  /* background-color: var(--peach); */
+  background: var(--tertiary-blue);
+  color: white;
 }
 
 nav {
-  background: rgb(116, 10, 10);
+  background: var(--primary-red);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -24,7 +38,7 @@ nav {
 
 /* This sets the navbar to be hidden initially and styles it in a flex column covering the entire page */
 nav ul.navbar {
-  background: rgba(116, 10, 10, 0.534);
+  background: var(--primary-red-alpha);
   backdrop-filter: blur(10px);
   list-style: none;
   display: flex;
@@ -82,7 +96,7 @@ nav ul#nav-dropdown {
   visibility: hidden;
   
   width: 100%;
-  background: rgba(116, 10, 10, 0.315);
+  background: var(--primary-red-alpha);
   backdrop-filter: blur(10px);
 
   position: relative;
@@ -91,7 +105,7 @@ nav ul#nav-dropdown {
 }
 
 nav li.nav-item a.nav-link:hover, #nav-droplink:hover {
-  background: rgba(83, 3, 3, 0.589);
+  background: var(--secondary-red-alpha);
 }
 
 /*Menu icon container*/
@@ -130,11 +144,81 @@ nav li.nav-item a.nav-link:hover, #nav-droplink:hover {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Content Styles */
+h1 {
+  text-align: center;
+  padding: 7px;
+}
 
+h2 {
+  padding: 3px;
+  margin-bottom: 7px;
+  font-weight: 100;
+}
+
+h3 {
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+section {
+  padding: max(10px, 2%);
+
+  ul {
+    list-style: initial;
+    margin: 5px 20px;
+  }
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--peach);
+  transition: all 300ms ease-in-out;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+.button {
+  background: var(--peach);
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 110px;
+  color: black;
+  transition: all 300ms ease-in-out;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: var(--secondary-red);
+  color: white;
+}
+
+.service-list {
+  background-color: var(--primary-blue);
+  color: white;
+  margin-top: 9px;
+  padding: 7px;
+}
+
+.recycle {
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.mission {
+  background: var(--primary-blue);
+}
 
 /* Footer Styles */
 footer {
-  background: rgb(116, 10, 10);
+  background: var(--primary-red);
   margin-top: auto;
   display: flex;
   flex-direction: column;

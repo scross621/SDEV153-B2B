@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 const navbarStyles = window.getComputedStyle(navbar);
+const body = document.body;
 
 const droplink = document.querySelector("#nav-droplink");
 const dropdown = document.querySelector("#nav-dropdown");
@@ -46,6 +47,7 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle('active');
     navbar.style.right = 0;
     navbar.style.visibility = 'visible';
+    body.classList.add("scroll-stop");
     click = 1;
     
   }
@@ -53,6 +55,7 @@ hamburger.addEventListener("click", () => {
     navbar.style.right = '-100%';
     navbar.style.visibility = null;
     hamburger.classList.toggle('active');
+    body.classList.remove("scroll-stop");
     click = 0;
   
   if (dropStyles.getPropertyValue('height') !== '0px'){

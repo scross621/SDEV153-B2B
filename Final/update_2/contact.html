@@ -45,15 +45,16 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section class="contact">
       <h2>Connect With Us</h2>
 
-      <form action="" method="post">
-        <input type="text" name="name" id="name" placeholder="John Doe">
-        <input type="email" name="email" id="email" placeholder="John@gmail.com">
+      <form id="contact" action="https://formspree.io/f/xyzegrnk" method="post">
+        <input type="text" name="name" id="name" placeholder="John Doe" required>
+        <input type="email" name="email" id="email" placeholder="John@gmail.com" required>
         <input type="tel" name="phone" id="phone" placeholder="111-223-1123">
         <input type="text" name="subject" id="subject" placeholder="Computer Service">
-        <textarea name="message" id="message" placeholder="Your message here..."></textarea>
+        <textarea name="message" id="message" placeholder="Your message here..." cols="40" rows="5"></textarea>
+        <input type="submit" value="Send">
       </form>
     </section>
   </main>

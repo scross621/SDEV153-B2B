@@ -299,6 +299,33 @@ footer {
   padding: min(3em, 5%);
 
   color: white;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-top: 15px;
+  }
+
+  li:first-child {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+footer .column {
+  text-align: center;
+}
+
+.footer-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+.footer-nav li.nav-item a.nav-link:hover, #nav-droplink:hover {
+  color: var(--peach);
 }
 
 footer div {
@@ -384,6 +411,8 @@ p {
 .services {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 15px;
 }
@@ -408,6 +437,29 @@ form#contact {
   input[type=submit] {
     width: 30%;
   }
+}
+
+footer {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 33%; */
+}
+
+footer .column:first-child {
+  flex-shrink: 2;
+}
+
+footer img {
+  margin: 0;
+  width: 90%;
+  max-width: 250px;
+  min-width: 100px;
 }
 
 }
